@@ -67,7 +67,7 @@ void List::remove(int k)
 	Node* delPtr;
 	
 	if(k == 1)
-	{
+	{//removes from front
 	  delPtr = frontPtr;
 	  frontPtr = frontPtr->link;
 	 }
