@@ -92,4 +92,31 @@ void List::remove(int k)
 	}
 	
 	//Implementations of missing operations
-	
+
+
+int List::get(int k)
+{
+	Node *currptr=frontPtr;
+	for ( int loc=1; loc != k;loc ++)
+		{
+			currptr= currptr -> link;
+		}
+	return currptr -> data;
+}
+
+void List::display()
+{
+	for (Node*currptr = frontPtr; currptr != nullptr; currptr = currptr -> link)
+		{
+			cout << currptr -> data << endl;
+		}
+}
+
+void List::clear()
+{//clears list, removes every element
+	while (num_elements != 0)
+		{
+			remove(1);
+			num_elements--;
+		}
+}
